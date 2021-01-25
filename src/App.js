@@ -1,13 +1,14 @@
 import './App.css';
 
-import Display from './components/Display';
-import ButtonPanel from './components/ButtonPanel';
+import Calculator from './components/Calculator';
 
 function App() {
+
   return (
+
     <div className="App">
-      <Display />
-      <ButtonPanel />
+      <Calculator />
+
     </div>
   );
 }
