@@ -3,29 +3,31 @@ import React, { Component } from 'react'
 import Display from '../components/Display';
 import ButtonPanel from '../components/ButtonPanel';
 
+import calculate from '../logic/calculate'
+
+
 class Calculator extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      data:null
+      value:null,
+      sign:null,
+      total:null
     }
     this.handleCallback = this.handleCallback.bind(this)
   }
 
   handleCallback(data) {
-    this.setState({
-      data: data
-    })
-    console.log(data)
+    this.setState(calculate(this.state, data))
+    console.log("oui")
   }
 
   render() {
     return(
       <div className='calculator'>
-        <Display />
+        <Display value={this.state.value} />
         <ButtonPanel callback={this.handleCallback} />
-        vkskvjldsjvdjdsvjlid
       </div>
     )
   }

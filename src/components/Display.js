@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 
 class Display extends Component {
 
+
   render() {
     return(
-      <p>DisplayComponent</p>
+      <div className="display">
+        <p>DisplayComponent</p>
+        <p>{this.props.value}</p>
+      </div>
     )
   }
 
