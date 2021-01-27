@@ -3,29 +3,19 @@ import React, { Component } from 'react'
 import './Display.css'
 
 
-const ValueDisplay = ({value}) => {
-  if (value === null) {
-    return ('');
-  } else{
-    return value
-  }
-};
-
 class Display extends Component {
-
 
   constructor(props) {
     super(props)
     this.state = {
       value: null
     }
-
   }
 
   componentDidMount() {
-    this.state = {
+    this.setState({
       value: this.props.value
-    }
+    })
   }
 
   componentDidUpdate(prevProps) {
@@ -37,7 +27,7 @@ class Display extends Component {
   render() {
     return(
       <div className="display">
-        <ValueDisplay value={this.state.value} />
+        {this.state.value}
       </div>
     )
   }
