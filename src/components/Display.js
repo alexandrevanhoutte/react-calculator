@@ -6,7 +6,6 @@ class Display extends Component {
   render() {
     return(
       <div className="display">
-        <p>DisplayComponent</p>
         <p>{this.props.value}</p>
       </div>
     )

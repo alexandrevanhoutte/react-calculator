@@ -26,7 +26,14 @@ function update_value_by_dot(calculator_data, sign) {
 }
 
 function update_by_sign(calculator_data, sign) {
-  if (calculator_data.total == null) {
+  if (calculator_data.value == null) {
+    return {
+      displayed_value: calculator_data.displayed_value,
+      value: calculator_data.displayed_value,
+      sign: sign,
+      total: calculator_data.total
+    }
+  } else if (calculator_data.total == null) {
     return {
       displayed_value: null,
       value: null,

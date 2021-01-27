@@ -21,7 +21,6 @@ class Calculator extends Component {
 
   handleCallback(data) {
     this.setState(update_calculator_data(this.state, data))
-    console.log("oui")
   }
 
   render() {

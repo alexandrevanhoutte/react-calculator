@@ -18,7 +18,6 @@ class ButtonPanel extends Component {
   render() {
     return(
       <div className='buttonpanel'>
-        <p>ButtonPanelComponent</p>
         <div className='row'>
           <Button callback={this.handleCallback} value='1' />
           <Button callback={this.handleCallback} value='2' />
