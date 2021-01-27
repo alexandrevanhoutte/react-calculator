@@ -17,14 +17,27 @@ class Display extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      value: null
+    }
+
+  }
+
+  componentDidMount() {
+    this.state = {
       value: this.props.value
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.value !== prevProps.value) {
+      this.setState({value: this.props.value})
     }
   }
 
   render() {
     return(
       <div className="display">
-        <ValueDisplay value={this.props.value} />
+        <ValueDisplay value={this.state.value} />
       </div>
     )
   }
