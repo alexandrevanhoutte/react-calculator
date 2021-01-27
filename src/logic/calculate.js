@@ -11,6 +11,20 @@ function calculate(value1, value2, sign) {
   }
 }
 
+function update_value_by_dot(calculator_data, sign) {
+  if (calculator_data.value.includes(sign)) {
+    return calculator_data
+  } else {
+    var new_value = (calculator_data.value ? calculator_data.value  : '') + sign
+    return {
+      displayed_value: new_value,
+      value: new_value,
+      sign: calculator_data.sign,
+      total: calculator_data.total
+    }
+  }
+}
+
 function update_by_sign(calculator_data, sign) {
   if (calculator_data.total == null) {
     return {
@@ -53,7 +67,9 @@ var action = {
   '*': update_by_sign,
   '-': update_by_sign,
   '+': update_by_sign,
-  '=': equal
+  '=': equal,
+  '.': update_value_by_dot,
+
 }
 
 function update_calculator_data(calculator_data, button_data) {
