@@ -23,19 +23,25 @@ class ButtonPanel extends Component {
           <Button callback={this.handleCallback} value='1' />
           <Button callback={this.handleCallback} value='2' />
           <Button callback={this.handleCallback} value='3' />
+          <Button callback={this.handleCallback} value='/' />
         </div>
         <div className='row'>
           <Button callback={this.handleCallback} value='4' />
           <Button callback={this.handleCallback} value='5' />
           <Button callback={this.handleCallback} value='6' />
+          <Button callback={this.handleCallback} value='*' />
         </div>
         <div className='row'>
           <Button callback={this.handleCallback} value='7' />
           <Button callback={this.handleCallback} value='8' />
           <Button callback={this.handleCallback} value='9' />
+          <Button callback={this.handleCallback} value='-' />
         </div>
         <div className='row'>
+          <Button callback={this.handleCallback} value='.' />
           <Button callback={this.handleCallback} value='0' />
+          <Button callback={this.handleCallback} value='=' />
+          <Button callback={this.handleCallback} value='+' />
         </div>
 
 
