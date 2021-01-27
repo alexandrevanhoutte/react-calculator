@@ -5,9 +5,9 @@ function calculate(value1, value2, sign) {
   } else if (sign === '-') {
     return value1 - value2
   } else if (sign === '*') {
-    return value1 - value2
+    return value1 * value2
   } else if (sign === '/') {
-    return value1 - value2
+    return value1 / value2
   }
 }
 
