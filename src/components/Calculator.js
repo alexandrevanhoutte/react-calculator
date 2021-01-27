@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Display from '../components/Display';
 import ButtonPanel from '../components/ButtonPanel';
 
+import './Calculator.css'
+
 import update_calculator_data from '../logic/calculate'
 
 

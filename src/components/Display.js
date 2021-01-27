@@ -1,12 +1,30 @@
 import React, { Component } from 'react'
 
+import './Display.css'
+
+
+const ValueDisplay = ({value}) => {
+  if (value === null) {
+    return ('');
+  } else{
+    return value
+  }
+};
+
 class Display extends Component {
 
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      value: this.props.value
+    }
+  }
 
   render() {
     return(
       <div className="display">
-        <p>{this.props.value}</p>
+        <ValueDisplay value={this.props.value} />
       </div>
     )
   }
